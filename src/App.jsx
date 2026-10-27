@@ -1,9 +1,20 @@
 import './App.css';
+import {calculateTotalSold} from "./constants/helper/Sales.js";
+import {inventory} from "./constants/inventory.js";
 
 function App() {
+  const totalSold = calculateTotalSold(inventory);
+
+  console.log('Totaal verkocht:', totalSold);
   return (
-    <h1>Begin hier met met maken van de applicatie!</h1>
-  )
+      <div>
+        <h1>TV Dashboard</h1>
+          <p>
+              Totaal aantal verkochte tv's:{' '}
+              <span className="sold-count">{totalSold}</span>
+          </p>
+      </div>
+  );
 }
 
 export default App
