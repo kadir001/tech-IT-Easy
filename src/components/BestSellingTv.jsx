@@ -1,7 +1,7 @@
 
 import {showTv} from '../helper/ShowTV.js';
-import { formatPrice } from '../helper/formatPrice';
-import { getScreenSizes } from '../helper/getScreenSizes';
+import { formatPrice } from '../helper/FormatPrice.js';
+import { getScreenSizes } from '../helper/GetScreenSizes.js';
 
 function BestSellingTv({ tv }) {
     return (
