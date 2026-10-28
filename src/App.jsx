@@ -1,5 +1,5 @@
 import './App.css';
-import {calculateTotalSold} from "./constants/helper/Sales.js";
+import {calculateTotalSold} from "./helper/Sales.js";
 import {inventory} from "./constants/inventory.js";
 
 function App() {
