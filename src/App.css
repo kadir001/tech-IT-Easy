@@ -3,3 +3,13 @@
     color: green;
     font-weight: bold;
 }
+
+.bought-count {
+    color: blue;
+    font-weight: bold;
+}
+
+.forSale-count{
+    color: red;
+    font-weight: bold;
+}
