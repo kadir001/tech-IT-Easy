@@ -4,6 +4,7 @@ import {inventory, bestSellingTv} from "./constants/inventory.js";
 import {calculateTotalSold} from "./helper/Sales.js";
 import {calculateTotalBought} from "./helper/Bought.js";
 import BestSellingTv from "./components/BestSellingTv.jsx";
+import showOutcomeInConsole from "./helper/oefenbestand.js";
 
 
 
@@ -15,6 +16,7 @@ function App() {
         console.log(event.target.textContent);
     }
 
+    showOutcomeInConsole();
 
     return (
         <main className="dashboard">
@@ -61,6 +63,8 @@ function App() {
                     Meest geschikt voor sport eerst
                 </button>
             </section>
+
+
         </main>
     );
 }
