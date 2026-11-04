@@ -21,6 +21,13 @@ function App() {
 
     const tvBrands = inventory.map((tv) => tv.brand);
 
+    function sortMostSold() {
+        const sortedTVs =  inventory.slice().sort((a, b) => {
+            return b.sold - a.sold;
+        });
+
+        console.log(sortedTVs);
+    }
     return (
         <main className="dashboard">
             <h1>Tech it easy dashboard</h1>
@@ -54,7 +61,10 @@ function App() {
                 <BestSellingTv tv={bestSellingTv} />
             </section>
             <section className="sort-buttons">
-                <button onClick={handleButtonClick}>
+                <button onClick={(event) => {
+                    handleButtonClick(event);
+                    sortMostSold();
+                }}>
                     Meest verkocht eerst
                 </button>
 
