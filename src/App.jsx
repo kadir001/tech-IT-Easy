@@ -28,6 +28,14 @@ function App() {
 
         console.log(sortedTVs);
     }
+
+    function sortCheapestFirst() {
+        const sortedTVs =  inventory.slice().sort((a, b) => {
+            return b.price - a.price;
+        })
+        console.log(sortedTVs);
+
+    }
     return (
         <main className="dashboard">
             <h1>Tech it easy dashboard</h1>
@@ -68,7 +76,10 @@ function App() {
                     Meest verkocht eerst
                 </button>
 
-                <button onClick={handleButtonClick}>
+                <button onClick={(event) => {
+                    handleButtonClick(event);
+                    sortCheapestFirst();
+                }}>
                     Goedkoopste eerst
                 </button>
 
