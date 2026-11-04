@@ -5,6 +5,7 @@ import {calculateTotalSold} from "./helper/Sales.js";
 import {calculateTotalBought} from "./helper/Bought.js";
 import BestSellingTv from "./components/BestSellingTv.jsx";
 import showOutcomeInConsole from "./helper/oefenbestand.js";
+import AllTVs from "./components/AllTVs.jsx";
 
 
 
@@ -17,7 +18,9 @@ function App() {
     }
 
     showOutcomeInConsole();
+
     const tvBrands = inventory.map((tv) => tv.brand);
+
     return (
         <main className="dashboard">
             <h1>Tech it easy dashboard</h1>
@@ -71,6 +74,15 @@ function App() {
                         <li key={index}>{brand}</li>
                     ))}
                 </ul>
+            </section>
+            <section className="best-selling">
+                <h2>Alle tv's</h2>
+
+                <div className="tv-list">
+                    {inventory.map((tv) => (
+                        <AllTVs key={tv.type} tv={tv} />
+                    ))}
+                </div>
             </section>
 
         </main>
