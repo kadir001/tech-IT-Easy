@@ -34,7 +34,12 @@ function App() {
             return a.price - b.price;
         })
         console.log(sortedTVs);
-
+    }
+    function bestForSportTV(){
+        const sortedTVs =  inventory.slice().sort((a, b) => {
+            return b.refreshRate - a.refreshRate;
+        })
+        console.log(sortedTVs);
     }
     return (
         <main className="dashboard">
@@ -83,9 +88,14 @@ function App() {
                     Goedkoopste eerst
                 </button>
 
-                <button onClick={handleButtonClick}>
+                <button onClick={(event) => {
+
+                handleButtonClick(event);
+                bestForSportTV();
+                }}>
                     Meest geschikt voor sport eerst
                 </button>
+
             </section>
             <section className="brands-section">
                 <h2>Alle tv-merken</h2>
