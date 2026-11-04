@@ -41,6 +41,13 @@ function App() {
         })
         console.log(sortedTVs);
     }
+    function biggestTV(){
+        const sortedTVs =  inventory.slice().sort((a, b) => {
+            return Math.max(...b.availableSizes) - Math.max(...a.availableSizes);
+        })
+        console.log(sortedTVs);
+    }
+
     return (
         <main className="dashboard">
             <h1>Tech it easy dashboard</h1>
@@ -95,7 +102,13 @@ function App() {
                 }}>
                     Meest geschikt voor sport eerst
                 </button>
+                <button onClick={(event) => {
 
+                    handleButtonClick(event);
+                    biggestTV();
+                }}>
+                    Meest geschikt voor sport eerst
+                </button>
             </section>
             <section className="brands-section">
                 <h2>Alle tv-merken</h2>
