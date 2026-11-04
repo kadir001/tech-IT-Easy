@@ -9,6 +9,7 @@ import AllTVs from "./components/AllTVs.jsx";
 
 
 
+
 function App() {
     const totalSold = calculateTotalSold(inventory);
     const totalBought = calculateTotalBought(inventory);
