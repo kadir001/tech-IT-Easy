@@ -20,6 +20,20 @@ function AllTVs({ tv }) {
                 <p className="screen-sizes">
                     {getScreenSizes(tv)}
                 </p>
+                <ul className="feature-list">
+                    {tv.options.map((option) => (
+                        <li key={option.name}>
+                <span className={
+                      option.applicable
+                          ? 'feature-yes'
+                          : 'feature-no'
+                  }>
+                {option.applicable ? '●' : '⊖'}
+                </span>
+                            {option.name}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </article>
     );
