@@ -17,7 +17,7 @@ function App() {
     }
 
     showOutcomeInConsole();
-
+    const tvBrands = inventory.map((tv) => tv.brand);
     return (
         <main className="dashboard">
             <h1>Tech it easy dashboard</h1>
@@ -63,7 +63,15 @@ function App() {
                     Meest geschikt voor sport eerst
                 </button>
             </section>
+            <section className="brands-section">
+                <h2>Alle tv-merken</h2>
 
+                <ul>
+                    {tvBrands.map((brand, index) => (
+                        <li key={index}>{brand}</li>
+                    ))}
+                </ul>
+            </section>
 
         </main>
     );
