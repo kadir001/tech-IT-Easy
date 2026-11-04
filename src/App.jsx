@@ -31,7 +31,7 @@ function App() {
 
     function sortCheapestFirst() {
         const sortedTVs =  inventory.slice().sort((a, b) => {
-            return b.price - a.price;
+            return a.price - b.price;
         })
         console.log(sortedTVs);
 
